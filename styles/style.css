@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 :root{
     --color--primario: #111212 ;
     --color--secundario: #0dcdd6;
     --color--terciario: #F6F6F6;
+    --color--cuaternario: #219fa9;
 
     --fuente-montserrat: "Montserrat", sans-serif;
     --fuente-krona: "Krona One", serif;
@@ -22,7 +27,7 @@ body {
 }
 
 .header{
-    padding: 2% 0 0 6%;
+    padding: 2% 0 0 12%;
     
 }
 
@@ -55,66 +60,220 @@ body {
 .container{
     display: flex;
     align-items: center;
-    padding: 4% 6%;
+    padding: 7% 12%;
     justify-content: space-between;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .container_section_content{
     display: flex;
     gap: 120px;
-    padding-bottom: 10%;
     align-items: center;
     width: 100%;
+    padding-bottom: 1%;
 }
 
 .container_content{
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
 .container_content_title{
     font-size:1rem;
     font-family: var(--fuente-montserrat);
-    text-align: center;
-    color: #219fa9;
+    color:var(--color--cuaternario);
 }
 
 .container_content_name{
     font-size:  2.5rem;
     font-family: var(--fuente-krona);
-    text-align: center;
 }
 
 .container_enlaces{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
-
-.container_enlaces_link{
-    width: 50%;
-    text-align: center;
-    padding: 21.5px 0;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+.bi{
+    font-size: 1.8rem;
+    color: var(--color--cuaternario);
 }
 
-.container_enlaces_link img {
-    width: 20px;
-}
-
-.container_enlaces_link:hover {
-    background-color:var(--color--primario);
+.bi:hover{
+    color: var(--color--terciario);
 }
 
 .imagen_personal{
-    width: 31%;
+    width: 32%;   
 }
+
+.animate__animated.animate__fadeInDown {  
+    --animate-duration: 3s;
+    opacity: 0;
+	animation: fadeIn 1.5s ease-in both;
+}
+
+/* section about */
+
+.container_about{
+    display: flex;
+    gap: 50px;
+    padding-bottom: 13%;
+    padding-top: 13%;
+}
+
+.container_about_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: justify;
+}
+
+.container_about_animation, .img_animation, .container_about_title{
+    line-height: 1.4rem;
+    view-timeline-name: --about;
+    view-timeline-axis: block;
+
+    animation-timeline: --about;
+    animation-name: show;
+
+    animation-range: entry 25% cover 48% ;
+    animation-fill-mode: both;
+}
+
+.img_animation{
+    padding-top: 3rem;
+}
+
+@keyframes show {
+    from { 
+        opacity: 0;
+        scale: 60%; 
+    }
+    to { 
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.container_about_title, .container_project_title{
+    color: var(--color--cuaternario);
+    font-size: 2.5rem;
+    font-family: var(--fuente-krona);
+    text-align: center;
+    padding-bottom: 2rem;
+
+}
+
+.container_about_text{
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+}
+
+/* section project */
+
+.container_projects{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 5%;
+}
+
+.container_project_title{
+    view-timeline-name: --about;
+    view-timeline-axis: block;
+
+    animation-timeline: --about;
+    animation-name: show;
+
+    animation-range: entry 70% cover 30% ;
+    animation-fill-mode: both;
+    padding-bottom: 3rem;
+}
+
+.container_projects_content{
+    display: flex;
+    view-timeline-name: --about;
+    view-timeline-axis: block;
+
+    animation-timeline: --about;
+    animation-name: showproject;
+
+    animation-range: entry 5% cover 40% ;
+    animation-fill-mode: both;
+}
+
+@keyframes showproject {
+    from { 
+        opacity: 0;
+        scale: 60%; 
+    }
+    to { 
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.project1, .project2 {
+    margin: 1%;
+    padding: 1%;
+    background-color: #09808a;
+    width: 35rem;
+    height: 18rem;
+    border-radius: 2%;
+    text-align: center;
+    background-color: var(--color--primario);
+}
+
+.project_img, .project_img2 {
+    border-radius: 2%;
+    overflow: hidden;
+    margin-bottom: 3%;
+    width: 100%;
+}
+
+.img_encrip{
+    width: 100%;
+    object-fit: cover; 
+    border-radius: inherit;
+}
+
+.img_coming_soon{
+    width: 32rem;
+    height: 18rem;
+    object-fit: cover; 
+    border-radius: inherit;
+}
+
+
+.buttons_projects{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.button_demo, .button_repo {
+ text-decoration: none;
+ color: var(--color--terciario);
+ background-color: var(--color--cuaternario);
+ font-family: var(--fuente-montserrat);
+ padding: 1.5%;
+ border-radius: 7px;
+}
+
+#git2{
+    color: #111212;
+}
+
+/* footer */
 
 .footer {
     background-color: var(--color--secundario);
@@ -124,8 +283,9 @@ body {
     font-family: var(--fuente-montserrat);
 }
 
+/* media */
 
-@media (max-width: 1200px){
+@media (max-width: 992px){
     
     .header{
         padding: 5%;
@@ -133,11 +293,22 @@ body {
 
     .header_menu{
         justify-content: center;
+        gap: 25px;
+    }
+
+    .header_menu_link_end{
+        display: none;
     }
 
     .container {
-        flex-direction: column-reverse;
         gap: 40px;
+        padding: 5% 5%;
+        width: 100%;
+    }
+
+    .container_section_content{
+        flex-direction: column-reverse;
+        gap: 60px;
     }
 
     .container_content {
@@ -146,6 +317,34 @@ body {
 
     .imagen_personal{
         width: 50%;
+    }
+
+    .img_animation {
+        display: none;
+    }
+
+    .container_projects{
+        gap: 40px;
+        box-sizing: border-box;
+    }
+
+    .container_projects_content{
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project1, .project2 {
+        width: auto;
+        height: auto;
+    }
+
+    .img_coming_soon{
+        width: 100%;
+        object-fit: cover; 
+        border-radius: inherit;
+        height: 100%;
     }
 
 }

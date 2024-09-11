@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <header class="header">
         <nav class="header_menu">
             <a class="header_menu_link" href="index.html">Home</a>
-            <a class="header_menu_link" href="about.html">Sobre mi</a>
-            <a class="header_menu_link" href="about.html">Proyectos</a>
+            <a class="header_menu_link" href="#about_me">Sobre mi</a>
+            <a class="header_menu_link" href="#projects">Proyectos</a>
             <a class="header_menu_link_end" >Kevin Moreno</a>  
         </nav>
     </header>
     <main class="container">
-        <section class="container_section_content">
+        <section class="container_section_content animate__animated animate__fadeInDown">
             <div class="container_content">
                 <h1 class="container_content_title">
                    Hola, Soy
@@ -27,36 +29,79 @@
                 </p>
     
                 <div class="container_enlaces">
-                   
+                    <a target="_blank" href="https://github.com/0kevin4"><i class="bi bi-github" ></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/kevin-moreno-adsi/"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
-            <img class="imagen_personal"src="./assets/Imagen.png" alt="Imagen-Personal">
+            <img class="imagen_personal"src="./assets/personal1.png" alt="Imagen-Personal">
         </section>
     
-        <section class="container_about">
-            <h1 class="container_content_title"><strong class="title-destaque">Sobre mi</strong></h1>
-            
-            <p class="container_content_text">¡Hola! Soy Kevin, 
-                tecnólogo en Análisis y Desarrollo de Sistemas de Información graduado del SENA 
-                en Colombia. Mi pasión por la tecnología y el desarrollo de software me llevó 
-                a estudiar esta carrera, donde adquirí una sólida base en programación, 
-                diseño de bases de datos, y análisis de sistemas.
-
-            </p>
-            <p class="container_content_text">
-                Durante mi formación, me especialicé en lenguajes de programación como 
-                PHP, C#, Js y SQL, y desarrollé habilidades en el uso de herramientas 
-                y sistemas de gestión de bases de datos como MySQL.
-            </p>
-            <p class="container_content_text">
-                Soy una persona proactiva y siempre estoy en busca de nuevos desafíos 
-                que me permitan aprender y crecer profesionalmente.
-            </p>
+        <section class="container_about" id="about_me">
+            <div class="container_about_content">
+                <h1 class="container_about_title">Sobre mi</h1>
+                <div class="container_about_animation">
+                    <p class="container_about_text">¡Hola! Soy Kevin, 
+                        tecnólogo en Análisis y Desarrollo de Sistemas de Información graduado del SENA 
+                        en Colombia. Mi pasión por la tecnología y el desarrollo de software me llevó 
+                        a estudiar esta carrera, donde adquirí una sólida base en programación, 
+                        diseño de bases de datos, y análisis de sistemas.
+                    </p><br>
+                    <p class="container_about_text">
+                        Durante mi formación, me especialicé en lenguajes de programación como 
+                        PHP, C#, Js y SQL, y desarrollé habilidades en el uso de herramientas 
+                        y sistemas de gestión de bases de datos como MySQL.
+                    </p><br>
+                    <p class="container_about_text">
+                        Soy una persona proactiva y siempre estoy en busca de nuevos desafíos 
+                        que me permitan aprender y crecer profesionalmente.
+                    </p>
+                </div>
+                
+            </div>  
+            <img class="imagen_personal img_animation"src="./assets/personal2.png" alt="Imagen-Personal">        
+        </section>
+        
+        <section class="container_projects" id="projects">
+            <h1 class="container_project_title">Proyectos</h1>
+            <div class="container_projects_content">
+                <div class="project1">
+                    <div class="project_img">
+                        <img class="img_encrip" src="./assets/Encriptador.png" alt="Proyecto 1">
+                    </div>
+                    <div class="buttons_projects">
+                        <a class="button_repo" href="https://github.com/0kevin4/Encriptador_Alura" target="_blank">Repositorio</a>
+                        <a class="button_demo" href="https://0kevin4.github.io/Encriptador_Alura/" target="_blank">Demo</a>
+                    </div>
+                </div>
+                <div class="project2">
+                    <div class="project_img2">
+                        <img class="img_coming_soon" src="./assets/coming.gif" alt="Proyecto 2">
+                    </div>
+                    <div class="buttons_projects">
+                    </div>
+                </div>
+            </div>
+            <div class="container_projects_content">
+                <div class="project1">
+                    <div class="project_img">
+                        <img class="img_coming_soon" src="./assets/coming.gif" alt="Proyecto 3">
+                    </div>
+                    <div class="buttons_projects">
+                    </div>
+                </div>
+                <div class="project2">
+                    <div class="project_img2">
+                        <img class="img_coming_soon" src="./assets/coming.gif" alt="Proyecto 4">
+                    </div>
+                    <div class="buttons_projects">
+                    </div>
+                </div>
+            </div>
         </section> 
            
     </main>
     <footer class="footer">
-        <p>Desarrollado por Kevin M.</p>
+        <p>Copyright © 2024 Kevin Moreno</p>
     </footer>
 </body>
 </html>
