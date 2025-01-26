@@ -240,7 +240,7 @@ body {
     width: 100%;
 }
 
-.img_encrip{
+.img_encrip, .img_control {
     width: 100%;
     object-fit: cover; 
     border-radius: inherit;
