@@ -110,7 +110,7 @@ body {
 }
 
 .imagen_personal{
-    width: 32%;   
+    width: 32%; 
 }
 
 .animate__animated.animate__fadeInDown {  
@@ -126,6 +126,7 @@ body {
     gap: 50px;
     padding-bottom: 13%;
     padding-top: 13%;
+    align-items: center;
 }
 
 .container_about_content{
