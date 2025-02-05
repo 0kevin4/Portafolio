@@ -109,6 +109,23 @@ body {
     color: var(--color--terciario);
 }
 
+.button_Cv {
+    background-color:var(--color--cuaternario);
+    border: none;
+    padding: 0.4rem;
+    border-radius: 7px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color--terciario);
+    cursor: pointer;
+}
+
+.button_Cv:hover{
+    background-color: var(--color--secundario);
+    color: var(--color--terciario);
+}
+
 .imagen_personal{
     width: 32%; 
 }
@@ -268,6 +285,11 @@ body {
  font-family: var(--fuente-montserrat);
  padding: 1.5%;
  border-radius: 7px;
+}
+
+.button_demo:hover, .button_repo:hover {
+    background-color: var(--color--secundario);
+    color: var(--color--terciario);
 }
 
 #git2{
