@@ -296,6 +296,36 @@ body {
     color: #111212;
 }
 
+/*section contact */
+
+.container_contact{
+    margin: 12.5%;
+    padding-top: 7%;
+    box-sizing: border-box;
+}
+
+.container_contact_title{
+    color: var(--color--cuaternario);
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.container_contact_content {
+    display: flex;
+    flex-direction: column;
+    view-timeline-name: --about;
+    view-timeline-axis: block;
+
+    animation-timeline: --about;
+    animation-name: showproject;
+
+    animation-range: entry 5% cover 40% ;
+    animation-fill-mode: both;
+}
+
+
 /* footer */
 
 .footer {
@@ -364,10 +394,13 @@ body {
     }
 
     .img_coming_soon{
-        width: 100%;
+        width: 75%;
         object-fit: cover; 
         border-radius: inherit;
-        height: 100%;
+    }
+
+    .container_contact{
+        padding-top: 0;
     }
 
 }
